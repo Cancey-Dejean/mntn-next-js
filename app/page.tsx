@@ -1,112 +1,217 @@
-import Image from 'next/image'
+import Image from "next/image"
+import Link from "next/link"
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="relative">
+      <header className="fixed top-0 left-0 w-full py-[64px] z-10">
+        <div className="wrapper-wide flex justify-between gap-2">
+          <Link href="/" className="">
+            <span>M</span>
+            <span>N</span>
+            <span>T</span>
+            <span>N</span>
+          </Link>
+
+          <nav className="">
+            <ul className="flex items-center">
+              <li>
+                <Link href="/">Equipment</Link>
+              </li>
+              <li>
+                <Link href="/">About us</Link>
+              </li>
+              <li>
+                <Link href="/">Blog</Link>
+              </li>
+            </ul>
+          </nav>
+
+          <div className="flex items-center gap-2">
+            <Link href="/">
+              <Image
+                className="relative w-6 h-6"
+                height={24}
+                width={24}
+                alt=""
+                src="/img/icons-general--cart.svg"
+              />
+            </Link>
+
+            <Link href="">Account</Link>
+          </div>
         </div>
-      </div>
+      </header>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <img
+        src="/img/hero.jpg"
+        alt=""
+        width={1920}
+        height={1505}
+        className="w-full object-cover absolute top-0 left-0 z-[0]"
+      />
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      <section className="relative pt-[287px] pb-[800px]">
+        <div className="wrapper-wide flex items-center justify-between gap-5 ">
+          <div className="flex self-start justify-start gap-[24px] relative   [transform:_rotate(90deg)] [transform-origin:0_0] top-[70px] left-[24px]">
+            <p className="">Follow us</p>
+            <img
+              className=" w-6 h-6 [transform:_rotate(-90deg)]"
+              alt=""
+              src="/img/instagram.svg"
+            />
+            <img
+              className=" w-6 h-6 [transform:_rotate(-90deg)]"
+              alt=""
+              src="/img/twitter.svg"
+            />
+          </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+          <div className="flex flex-col gap-8">
+            <div className="relative bg-accent w-[72px] h-[2px]" />
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
+            <h1 className=" text-[88px] leading-[100px] capitalize font-semibold font-chronicle-display inline-block max-w-[950px]">
+              Be prepared for the Mountains and beyond!
+            </h1>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+            {/* <h1 className=" text-[88px] leading-[100px] capitalize font-semibold font-chronicle-display inline-block max-w-[950px]">
+              Be prepared for the Mountains and beyond!
+            </h1> */}
+
+            <div className=" tracking-[6px] uppercase font-extrabold text-accent">
+              A Hiking guide
+            </div>
+            <a
+              className="[text-decoration:none] flex flex-row items-center justify-start gap-[16px] text-[inherit]"
+              href="#"
+            >
+              <b className="">scroll down</b>
+              <img
+                className=" w-4 h-6"
+                alt=""
+                src="/img/iconnavigationarrow-downward-24px.svg"
+              />
+            </a>
+          </div>
+
+          <div className=" flex flex-row items-center justify-start text-right">
+            <div className="flex flex-row items-center justify-start gap-[32px]">
+              <div className="overflow-hidden flex flex-col items-end justify-start gap-[40px]">
+                <span className="">Start</span>
+                <span className="">01</span>
+                <span className="">02</span>
+                <span className="">03</span>
+              </div>
+              <div className=" bg-gray w-[3px] h-60">
+                <div className=" top-[0px] left-[0px] bg-wei w-[3px] h-[60px]" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="relative">
+        <div className="wrapper flex">
+          <div className=" w-[782px] h-[542px]">
+            <b className=" top-[0%] left-[0%] leading-[240px] opacity-[0.1]">
+              01
+            </b>
+            <div className=" w-[80.82%] top-[calc(50%_-_168px)] right-[0%] left-[19.18%] overflow-hidden flex flex-col items-start justify-start gap-[27px] text-lg text-accent">
+              <div className="flex flex-row items-center justify-start gap-[24px]">
+                <div className=" bg-accent w-[72px] h-0.5" />
+                <div className=" tracking-[6px] uppercase font-extrabold">
+                  GEt Started
+                </div>
+              </div>
+              <div className=" text-45xl font-semibold font-chronicle-display text-wei inline-block w-[555px]">
+                What level of hiker are you?
+              </div>
+              <b className=" leading-[32px] inline-block text-wei w-[632px]">{`Determining what level of hiker you are can be an important tool when planning future hikes. This hiking level guide will help you plan hikes according to different hike ratings set by various websites like All Trails and Modern Hiker. What type of hiker are you – novice, moderate, advanced moderate, expert, or expert backpacker? `}</b>
+              <a
+                className="[text-decoration:none]  w-[127px] h-[22px] text-[inherit]"
+                href="/"
+              >
+                <b className=" top-[0px] left-[0px]">read more</b>
+                <img
+                  className=" top-[3px] left-[103px] w-6 h-4"
+                  alt=""
+                  src="/iconnavigationarrow-downward-24px1.svg"
+                />
+              </a>
+            </div>
+          </div>
+          <img
+            className=" w-[566px] h-[720px] object-cover"
+            alt=""
+            src="/img/image@2x.png"
+          />
+        </div>
+
+        <footer className="">
+          <div className="wrapper flex items-start">
+            <div className="flex-1">
+              <a className="w-[108px]  text-13xl" href="/">
+                <b className="tracking-[0.01em] capitalize">M</b>
+                <b className="tracking-[0.01em] capitalize">N</b>
+                <b className=" tracking-[0.01em] capitalize">T</b>
+                <b className=" tracking-[0.01em] capitalize">N</b>
+              </a>
+              <p className="leading-[32px] ">
+                Get out there & discover your next slope, mountain &
+                destination!
+              </p>
+              <p className=" leading-[32px] font-medium opacity-[0.5]">
+                Copyright 2019 MNTN, Inc. Terms & Privacy
+              </p>
+            </div>
+
+            <div className=" flex flex-1">
+              <div className="flex-1 flex flex-col items-start justify-start gap-[18px]">
+                <b className="relative text-5xl leading-[32px] text-accent">
+                  More on The Blog
+                </b>
+                <a
+                  className="[text-decoration:none] relative leading-[32px] font-medium text-[inherit]"
+                  href="/"
+                >
+                  About MNTN
+                </a>
+                <a
+                  className="[text-decoration:none] relative leading-[32px] font-medium text-[inherit]"
+                  href="/"
+                >{`Contributors & Writers`}</a>
+                <a
+                  className="[text-decoration:none] relative leading-[32px] font-medium text-[inherit]"
+                  href="/"
+                >
+                  Write For Us
+                </a>
+                <a
+                  className="[text-decoration:none] relative leading-[32px] font-medium text-[inherit]"
+                  href="/"
+                >
+                  Contact Us
+                </a>
+                <a
+                  className="[text-decoration:none] relative leading-[32px] font-medium text-[inherit]"
+                  href="/"
+                >
+                  Privacy Policy
+                </a>
+              </div>
+              <div className="flex-1 flex flex-col items-start justify-start gap-[18px]">
+                <b className="relative text-5xl leading-[32px] text-accent">
+                  More on MNTN
+                </b>
+                <div className="relative leading-[32px] font-medium">
+                  The Team
+                </div>
+                <div className="relative leading-[32px] font-medium">Jobs</div>
+                <div className="relative leading-[32px] font-medium">Press</div>
+              </div>
+            </div>
+          </div>
+        </footer>
       </div>
     </main>
   )
