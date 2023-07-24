@@ -5,8 +5,8 @@ export default function Home() {
   return (
     <main className="relative">
       <header className="fixed top-0 left-0 w-full py-[64px] z-10">
-        <div className="wrapper-wide flex justify-between gap-2">
-          <Link href="/" className="">
+        <div className="wrapper-wide items-center flex justify-between gap-2">
+          <Link href="/" className="text-[32px]">
             <span>M</span>
             <span>N</span>
             <span>T</span>
@@ -14,7 +14,7 @@ export default function Home() {
           </Link>
 
           <nav className="">
-            <ul className="flex items-center">
+            <ul className="flex items-center gap-10 [&_li_a]:font-bold [&_li_a]:text-[18px]">
               <li>
                 <Link href="/">Equipment</Link>
               </li>
@@ -27,7 +27,7 @@ export default function Home() {
             </ul>
           </nav>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 [&_a]:text-[18px] [&_a]:font-bold">
             <Link href="/">
               <Image
                 className="relative w-6 h-6"
@@ -43,17 +43,16 @@ export default function Home() {
         </div>
       </header>
 
-      <img
-        src="/img/hero.jpg"
-        alt=""
-        width={1920}
-        height={1505}
-        className="w-full object-cover absolute top-0 left-0 z-[0]"
-      />
-
-      <section className="relative pt-[287px] pb-[800px]">
-        <div className="wrapper-wide flex items-center justify-between gap-5 ">
-          <div className="flex self-start justify-start gap-[24px] relative   [transform:_rotate(90deg)] [transform-origin:0_0] top-[70px] left-[24px]">
+      <section className="relative pt-[287px] pb-[800px] mb-[-200px] ">
+        <img
+          src="/img/hero.jpg"
+          alt=""
+          width={1920}
+          height={1505}
+          className="w-full object-cover absolute top-0 left-0 z-[0]"
+        />
+        <div className="wrapper-wide flex items-center justify-between gap-5 relative">
+          <div className="flex self-start justify-start gap-[24px] relative [transform:_rotate(90deg)] [transform-origin:0_0] top-[110px] left-[24px]">
             <p className="">Follow us</p>
             <img
               className=" w-6 h-6 [transform:_rotate(-90deg)]"
@@ -96,123 +95,236 @@ export default function Home() {
 
           <div className=" flex flex-row items-center justify-start text-right">
             <div className="flex flex-row items-center justify-start gap-[32px]">
-              <div className="overflow-hidden flex flex-col items-end justify-start gap-[40px]">
-                <span className="">Start</span>
-                <span className="">01</span>
-                <span className="">02</span>
-                <span className="">03</span>
+              <div className="overflow-hidden flex flex-col items-end justify-start gap-[40px] [&_span]:hover:cursor-pointer">
+                <button type="button" className="">
+                  Start
+                </button>
+                <button type="button" className="">
+                  01
+                </button>
+                <button type="button" className="">
+                  02
+                </button>
+                <button type="button" className="">
+                  03
+                </button>
               </div>
+
               <div className=" bg-gray w-[3px] h-60">
-                <div className=" top-[0px] left-[0px] bg-wei w-[3px] h-[60px]" />
+                <button type="button" className="bg-white w-full h-[25%]" />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <div className="relative">
-        <div className="wrapper flex">
-          <div className=" w-[782px] h-[542px]">
-            <b className=" top-[0%] left-[0%] leading-[240px] opacity-[0.1]">
+      <section className="relative py-[100px]">
+        <div className="wrapper gap-[100px] items-start flex">
+          <div className="flex-1 relative">
+            <p className="text-[240px] leading-[1] opacity-20 absolute top-0 left-0">
               01
-            </b>
-            <div className=" w-[80.82%] top-[calc(50%_-_168px)] right-[0%] left-[19.18%] overflow-hidden flex flex-col items-start justify-start gap-[27px] text-lg text-accent">
-              <div className="flex flex-row items-center justify-start gap-[24px]">
-                <div className=" bg-accent w-[72px] h-0.5" />
-                <div className=" tracking-[6px] uppercase font-extrabold">
+            </p>
+
+            <div className="max-w-[632px] w-full ml-auto pt-[100px]">
+              <div className="flex flex-col gap-[24px] items-start text-white">
+                <div className=" bg-accent max-w-[72px] w-full h-0.5" />
+
+                <p className=" tracking-[6px] uppercase font-extrabold">
                   GEt Started
-                </div>
+                </p>
+
+                <h2 className=" text-[64px] leading-[1.1] font-semibold">
+                  What level of hiker are you?
+                </h2>
+
+                <p>
+                  Determining what level of hiker you are can be an important
+                  tool when planning future hikes. This hiking level guide will
+                  help you plan hikes according to different hike ratings set by
+                  various websites like All Trails and Modern Hiker. What type
+                  of hiker are you – novice, moderate, advanced moderate,
+                  expert, or expert backpacker?
+                </p>
+                <Link className="flex items-center gap-4 text-accent" href="/">
+                  <span className="font-bold ">read more</span>
+                  <Image
+                    className="w-6 h-4 object-contain"
+                    width={24}
+                    height={16}
+                    alt=""
+                    src="/img/iconnavigationarrow-downward-24px1.svg"
+                  />
+                </Link>
               </div>
-              <div className=" text-45xl font-semibold font-chronicle-display text-wei inline-block w-[555px]">
-                What level of hiker are you?
-              </div>
-              <b className=" leading-[32px] inline-block text-wei w-[632px]">{`Determining what level of hiker you are can be an important tool when planning future hikes. This hiking level guide will help you plan hikes according to different hike ratings set by various websites like All Trails and Modern Hiker. What type of hiker are you – novice, moderate, advanced moderate, expert, or expert backpacker? `}</b>
-              <a
-                className="[text-decoration:none]  w-[127px] h-[22px] text-[inherit]"
-                href="/"
-              >
-                <b className=" top-[0px] left-[0px]">read more</b>
-                <img
-                  className=" top-[3px] left-[103px] w-6 h-4"
-                  alt=""
-                  src="/iconnavigationarrow-downward-24px1.svg"
-                />
-              </a>
             </div>
           </div>
-          <img
-            className=" w-[566px] h-[720px] object-cover"
-            alt=""
-            src="/img/image@2x.png"
-          />
-        </div>
 
-        <footer className="">
-          <div className="wrapper flex items-start">
-            <div className="flex-1">
+          <Image width={566} height={720} alt="" src="/img/image@2x.png" />
+        </div>
+      </section>
+
+      <section className="relative py-[100px]">
+        <div className="wrapper gap-[100px] items-start flex flex-row-reverse">
+          <div className="flex-1 relative">
+            <p className="text-[240px] leading-[1] opacity-20 absolute top-0 left-0">
+              02
+            </p>
+
+            <div className="max-w-[632px] w-full ml-auto pt-[100px]">
+              <div className="flex flex-col gap-[24px] items-start text-white">
+                <div className=" bg-accent max-w-[72px] w-full h-0.5" />
+
+                <p className=" tracking-[6px] uppercase font-extrabold">
+                  GEt Started
+                </p>
+
+                <h2 className=" text-[64px] leading-[1.1] font-semibold">
+                  What level of hiker are you?
+                </h2>
+
+                <p>
+                  Determining what level of hiker you are can be an important
+                  tool when planning future hikes. This hiking level guide will
+                  help you plan hikes according to different hike ratings set by
+                  various websites like All Trails and Modern Hiker. What type
+                  of hiker are you – novice, moderate, advanced moderate,
+                  expert, or expert backpacker?
+                </p>
+                <Link className="flex items-center gap-4 text-accent" href="/">
+                  <span className="font-bold ">read more</span>
+                  <Image
+                    className="w-6 h-4 object-contain"
+                    width={24}
+                    height={16}
+                    alt=""
+                    src="/img/iconnavigationarrow-downward-24px1.svg"
+                  />
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <Image width={566} height={720} alt="" src="/img/image@2x.png" />
+        </div>
+      </section>
+
+      <section className="relative py-[100px]">
+        <div className="wrapper gap-[100px] items-start flex">
+          <div className="flex-1 relative">
+            <p className="text-[240px] leading-[1] opacity-20 absolute top-0 left-0">
+              03
+            </p>
+
+            <div className="max-w-[632px] w-full ml-auto pt-[100px]">
+              <div className="flex flex-col gap-[24px] items-start text-white">
+                <div className=" bg-accent max-w-[72px] w-full h-0.5" />
+
+                <p className=" tracking-[6px] uppercase font-extrabold">
+                  GEt Started
+                </p>
+
+                <h2 className=" text-[64px] leading-[1.1] font-semibold">
+                  What level of hiker are you?
+                </h2>
+
+                <p>
+                  Determining what level of hiker you are can be an important
+                  tool when planning future hikes. This hiking level guide will
+                  help you plan hikes according to different hike ratings set by
+                  various websites like All Trails and Modern Hiker. What type
+                  of hiker are you – novice, moderate, advanced moderate,
+                  expert, or expert backpacker?
+                </p>
+                <Link className="flex items-center gap-4 text-accent" href="/">
+                  <span className="font-bold ">read more</span>
+                  <Image
+                    className="w-6 h-4 object-contain"
+                    width={24}
+                    height={16}
+                    alt=""
+                    src="/img/iconnavigationarrow-downward-24px1.svg"
+                  />
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <Image width={566} height={720} alt="" src="/img/image@2x.png" />
+        </div>
+      </section>
+
+      <footer className="py-[100px]">
+        <div className="wrapper flex items-stretch justify-between">
+          <div className="max-w-[353px] w-full flex flex-col">
+            <div>
               <a className="w-[108px]  text-13xl" href="/">
                 <b className="tracking-[0.01em] capitalize">M</b>
                 <b className="tracking-[0.01em] capitalize">N</b>
                 <b className=" tracking-[0.01em] capitalize">T</b>
                 <b className=" tracking-[0.01em] capitalize">N</b>
               </a>
-              <p className="leading-[32px] ">
+
+              <p className="font-bold my-6">
                 Get out there & discover your next slope, mountain &
                 destination!
               </p>
-              <p className=" leading-[32px] font-medium opacity-[0.5]">
-                Copyright 2019 MNTN, Inc. Terms & Privacy
-              </p>
             </div>
 
-            <div className=" flex flex-1">
-              <div className="flex-1 flex flex-col items-start justify-start gap-[18px]">
-                <b className="relative text-5xl leading-[32px] text-accent">
-                  More on The Blog
-                </b>
-                <a
-                  className="[text-decoration:none] relative leading-[32px] font-medium text-[inherit]"
-                  href="/"
-                >
-                  About MNTN
-                </a>
-                <a
-                  className="[text-decoration:none] relative leading-[32px] font-medium text-[inherit]"
-                  href="/"
-                >{`Contributors & Writers`}</a>
-                <a
-                  className="[text-decoration:none] relative leading-[32px] font-medium text-[inherit]"
-                  href="/"
-                >
-                  Write For Us
-                </a>
-                <a
-                  className="[text-decoration:none] relative leading-[32px] font-medium text-[inherit]"
-                  href="/"
-                >
-                  Contact Us
-                </a>
-                <a
-                  className="[text-decoration:none] relative leading-[32px] font-medium text-[inherit]"
-                  href="/"
-                >
-                  Privacy Policy
-                </a>
+            <p className=" font-medium opacity-[0.5] mt-auto">
+              Copyright 2019 MNTN, Inc. Terms & Privacy
+            </p>
+          </div>
+
+          <div className="flex items-start">
+            <div className="flex-1 flex flex-col items-start justify-start gap-[18px]">
+              <h4 className="text-2xl leading-[32px] text-accent">
+                More on The Blog
+              </h4>
+
+              <ul className="flex flex-col gap-[18px]">
+                <li>
+                  <Link className="leading-[32px] text-lg" href="/">
+                    About MNTN
+                  </Link>
+                </li>
+                <li>
+                  <Link className="leading-[32px] text-lg" href="/">
+                    Contributors & Writers
+                  </Link>
+                </li>
+
+                <li>
+                  <Link className="leading-[32px] text-lg" href="/">
+                    Write For Us
+                  </Link>
+                </li>
+
+                <li>
+                  <Link className="leading-[32px] text-lg" href="/">
+                    Contact Us
+                  </Link>
+                </li>
+                <li>
+                  <Link className="leading-[32px] text-lg" href="/">
+                    Privacy Policy
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div className="flex-1 flex flex-col items-start justify-start gap-[18px]">
+              <b className="relative text-5xl leading-[32px] text-accent">
+                More on MNTN
+              </b>
+              <div className="relative leading-[32px] font-medium">
+                The Team
               </div>
-              <div className="flex-1 flex flex-col items-start justify-start gap-[18px]">
-                <b className="relative text-5xl leading-[32px] text-accent">
-                  More on MNTN
-                </b>
-                <div className="relative leading-[32px] font-medium">
-                  The Team
-                </div>
-                <div className="relative leading-[32px] font-medium">Jobs</div>
-                <div className="relative leading-[32px] font-medium">Press</div>
-              </div>
+              <div className="relative leading-[32px] font-medium">Jobs</div>
+              <div className="relative leading-[32px] font-medium">Press</div>
             </div>
           </div>
-        </footer>
-      </div>
+        </div>
+      </footer>
     </main>
   )
 }
