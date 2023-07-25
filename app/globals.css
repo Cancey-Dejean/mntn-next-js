@@ -2,29 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-*,
-::before,
-::after {
-  box-sizing: border-box;
+@font-face {
+  font-family: "Chronicle Display";
+  src: url("/fonts/Chronicle-Display-Bold.otf") format("opentype");
+  font-weight: 700;
 }
 
-html {
-  scroll-behavior: smooth;
-  @apply bg-slate-200;
+@font-face {
+  font-family: "Chronicle Display";
+  src: url("/fonts/Chronicle-Display-Semibold.otf") format("opentype");
+  font-weight: 600;
 }
 
-body {
-  @apply bg-primary text-white;
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Medium.ttf") format("truetype");
+  font-weight: 500;
 }
 
-p {
-  @apply text-[18px];
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Bold.ttf") format("truetype");
+  font-weight: 700;
 }
 
-.wrapper {
-  @apply max-w-[1462px] mx-auto px-5;
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
 }
 
-.wrapper-wide {
-  @apply max-w-[1760px] mx-auto px-5;
+@layer base {
+  html {
+    @apply antialiased scroll-smooth;
+  }
+
+  body {
+    @apply bg-primary text-white font-gilroy font-bold;
+  }
+
+  p {
+    @apply text-[18px];
+  }
+}
+
+@layer components {
+}
+
+@layer utilities {
+  .wrapper {
+    @apply max-w-[1462px] mx-auto px-5;
+  }
+
+  .wrapper-wide {
+    @apply max-w-[1760px] mx-auto px-5;
+  }
 }
